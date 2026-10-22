@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Orientación Vocacional 2026 · Test de Holland</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#f9f5ee;--ink:#2a2a24;--card:#fffdf8;--muted:#6b675c;--or:#d4814a;--bl:#aecfdb;--ye:#e8c870;--pk:#cf5671;--te:#55797c;--dot:#d9d2c3;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#1d1b17;--ink:#f3ecdd;--card:#2a2722;--muted:#b3ab9a;--dot:#37332c}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#1d1b17;--ink:#f3ecdd;--card:#2a2722;--muted:#b3ab9a;--dot:#37332c}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);background-image:radial-gradient(var(--dot) 1.5px,transparent 1.5px);background-size:30px 30px;color:var(--ink);font:400 17px/1.5 "Plus Jakarta Sans",system-ui,sans-serif}
+main{max-width:560px;margin:0 auto;padding:16px 18px 50px}
+h1,h2{font-family:"Bricolage Grotesque","Plus Jakarta Sans",system-ui,sans-serif;line-height:1.05;margin:0}
+h1{font-size:clamp(38px,11vw,58px);font-weight:800}h2{font-size:32px;font-weight:800}
+.center{text-align:center;padding-top:8px;animation:pop .4s both}
+.lead{color:var(--muted);font-size:18px;margin:14px 0 22px}
+.tag{display:inline-block;background:var(--bl);color:#2a2a24;border:3px solid var(--ink);border-radius:30px 40px 30px 40px;padding:0 30px 6px;box-shadow:6px 6px 0 var(--ink);margin:12px 0 4px;transform:rotate(-2deg)}
+.btn{font:800 20px "Plus Jakarta Sans",system-ui,sans-serif;border:3px solid var(--ink);border-radius:40px;padding:15px 32px;box-shadow:5px 5px 0 var(--ink);cursor:pointer;color:#2a2a24;background:var(--bl);margin:6px;transition:transform .1s,box-shadow .1s}
+.btn:active,.ans:active,.ib:active{transform:translate(4px,4px);box-shadow:1px 1px 0 var(--ink)}
+.btn.or{background:var(--or);color:#fff}
+.compass{position:relative;width:230px;height:230px;margin:6px auto 18px;border:3px solid var(--ink);border-radius:50%;background:var(--card)}
+.compass i{position:absolute;width:42px;height:42px;margin:-21px;border:3px solid var(--ink);border-radius:50%;display:grid;place-items:center;font:800 17px "Bricolage Grotesque",sans-serif;color:#fff;font-style:normal}
+.needle{position:absolute;left:50%;top:14%;width:20px;height:72%;margin-left:-10px;background:linear-gradient(var(--or) 50%,var(--te) 50%);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);animation:sw 3s ease-in-out infinite alternate}
+.hub{position:absolute;left:50%;top:50%;width:18px;height:18px;margin:-9px;background:var(--ink);border-radius:50%}
+@keyframes sw{from{transform:rotate(-40deg)}to{transform:rotate(55deg)}}
+@keyframes pop{from{transform:scale(.88) translateY(18px);opacity:0}}
+.emoji{font-size:72px;line-height:1.1;margin:10px 0}
+.hud{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.ib{width:46px;height:46px;border-radius:50%;border:3px solid var(--ink);background:var(--card);font-size:20px;cursor:pointer;box-shadow:3px 3px 0 var(--ink);color:var(--ink)}
+.pill{display:inline-block;background:var(--ye);color:#2a2a24;border:3px solid var(--ink);border-radius:30px;padding:3px 14px;font-weight:800;font-size:14px}
+.xp{margin-left:auto;font-weight:800}
+.prog{height:18px;border:3px solid var(--ink);border-radius:20px;background:var(--card);overflow:hidden}
+.prog i{display:block;height:100%;background:var(--or);border-radius:20px;transition:width .35s}
+.cnt{text-align:right;font-size:13px;font-weight:700;color:var(--muted);margin:4px 4px 12px}
+.card{background:var(--card);border:3px solid var(--ink);border-radius:26px;padding:20px;box-shadow:6px 6px 0 var(--ink);margin:12px 0 18px;animation:pop .35s both;color:var(--ink)}
+.big{font:800 clamp(34px,10vw,50px)/1.05 "Bricolage Grotesque",sans-serif;text-align:center;padding:46px 12px;color:#2a2a24}
+.qt{font:800 24px/1.2 "Bricolage Grotesque",sans-serif;text-align:center;padding:30px 16px;background:var(--ye);color:#2a2a24}
+.ask{text-align:center;font-weight:700;color:var(--muted);margin:0 0 10px}
+.ans{display:block;width:100%;text-align:left;font:700 17px "Plus Jakarta Sans",system-ui,sans-serif;background:var(--card);color:var(--ink);border:3px solid var(--ink);border-radius:20px;padding:15px 18px;margin:0 0 12px;box-shadow:4px 4px 0 var(--ink);cursor:pointer}
+.ans.on{background:var(--te);color:#fff}
+.ans.yes{background:var(--bl);color:#2a2a24;text-align:center;font-size:19px}.ans.no{text-align:center;font-size:19px}
+.ans.yes.on{background:var(--te);color:#fff}.ans.no.on{background:var(--pk);color:#fff}
+.code{display:flex;gap:14px;justify-content:center;margin:16px 0}
+.code span{width:84px;height:84px;border:3px solid var(--ink);border-radius:50%;display:grid;place-items:center;font:800 40px "Bricolage Grotesque",sans-serif;color:#fff;box-shadow:5px 5px 0 var(--ink);animation:pop .6s cubic-bezier(.2,1.5,.4,1) both}
+.bar{margin:14px 0}.bar b{display:flex;justify-content:space-between}.bar small{color:var(--muted)}
+.track{height:20px;border:3px solid var(--ink);border-radius:20px;overflow:hidden;background:var(--card)}
+.track i{display:block;height:100%;width:0;transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
+.dim h3{font:800 24px "Bricolage Grotesque",sans-serif;margin:0 0 4px}.dim p{margin:6px 0}
+.foot{color:var(--muted);font-size:13px;margin-top:26px}
+.cf{position:fixed;top:-20px;width:10px;height:14px;z-index:9;animation:fall linear forwards;pointer-events:none}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
+.hold{user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;touch-action:manipulation;cursor:pointer}
+.hint{display:block;margin:-6px auto 16px;font:700 14px "Plus Jakarta Sans",system-ui,sans-serif;background:transparent;border:2px dashed var(--ink);border-radius:30px;padding:7px 14px;color:var(--ink);cursor:pointer}
+#sheet{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:flex-end;justify-content:center;z-index:20;padding:0 14px calc(14px + env(safe-area-inset-bottom,0px))}
+.sh{background:var(--card);border:3px solid var(--ink);border-radius:26px;box-shadow:6px 6px 0 var(--ink);padding:20px;width:100%;max-width:520px;animation:pop .3s both;text-align:center;color:var(--ink)}
+.sh b{font:800 26px "Bricolage Grotesque",sans-serif}.sh p{font-size:18px;margin:10px 0 14px}
+</style>
+</head>
+<body>
+<main id="app"></main>
+<script>
+const DIMS=[
+{n:"Realista",l:"R",c:"#cf5671",d:"Te gusta lo concreto: herramientas, máquinas, naturaleza, el hacer con las manos. Sos práctico/a, estable y directo/a.",j:"Ingeniería, mecánica, agronomía, arquitectura, técnico en electrónica, veterinaria"},
+{n:"Investigador",l:"I",c:"#55797c",d:"Te mueve la curiosidad: observar, analizar, entender cómo funcionan las cosas. Sos metódico/a, reservado/a e independiente.",j:"Ciencias, medicina, biología, informática, matemática, investigación"},
+{n:"Social",l:"S",c:"#d4814a",d:"Disfrutás ayudar, enseñar y acompañar a otras personas. Sos cooperativo/a, comprensivo/a y de buen trato.",j:"Psicopedagogía, docencia, psicología, enfermería, trabajo social, kinesiología"},
+{n:"Convencional",l:"C",c:"#c9a43a",d:"Te sentís cómodo/a con el orden, los datos y los planes claros. Sos eficiente, responsable y prolijo/a.",j:"Contabilidad, administración, secretariado, gestión pública, bibliotecología"},
+{n:"Emprendedor",l:"E",c:"#4f8fb0",d:"Te gusta liderar, persuadir y lanzar proyectos. Sos enérgico/a, sociable y con confianza en vos.",j:"Marketing, ciencias económicas, derecho, comercio, gestión de empresas, política"},
+{n:"Artístico",l:"A",c:"#8a5fb0",d:"Preferís la libertad para crear y expresarte. Sos imaginativo/a, intuitivo/a, original e independiente.",j:"Diseño, artes, comunicación, música, teatro, letras, publicidad"}];
+const ADJ=["Huraño","Discutidor","Arrogante","Capaz","Común y corriente","Conformista","Concienzudo","Curioso","Dependiente","Eficiente","Paciente","Dinámico","Femenino","Amistoso","Generoso","Dispuesto a ayudar","Inflexible","Insensible","Introvertido","Intuitivo","Irritable","Amable","De buenos modales","Varonil","Inconforme","Poco realista","Poco culto","Poco idealista","Impopular","Original","Pesimista","Hedonista","Práctico","Rebelde","Reservado","Culto","Lento de movimientos","Sociable","Estable","Esforzado","Fuerte","Suspicaz","Cumplido","Modesto","Poco convencional"];
+const BQ=["Distraído","Capacidad artística","Capacidad burocrática","Conservador","Cooperación","Expresividad","Liderazgo","Gusto en ayudar a los demás","Capacidad matemática","Capacidad mecánica","Originalidad","Popularidad con el sexo opuesto","Capacidad para investigar","Capacidad científica","Seguridad en sí mismo","Comprensión de sí mismo","Comprensión de los demás","Pulcritud"];
+const CQ=["Estar feliz y satisfecho","Descubrir o elaborar un producto útil","Ayudar a quienes están en apuros","Llegar a ser una autoridad en algún tema","Llegar a ser un deportista destacado","Llegar a ser un líder en la comunidad","Ser influyente en asuntos públicos","Observar una conducta religiosa formal","Contribuir a la ciencia en forma teórica","Contribuir a la ciencia en forma técnica","Escribir bien (novelas, poemas)","Haber leído mucho","Trabajar mucho","Contribuir al bienestar humano","Crear buenas obras artísticas (teatro, pintura)","Llegar a ser un buen músico","Llegar a ser un experto en finanzas y negocios","Hallar un propósito real en la vida"];
+const DQ=[
+{t:"1. Me gusta…",o:{a:"Leer y meditar sobre los problemas",b:"Anotar datos y hacer cómputos",c:"Tener una posición poderosa",d:"Enseñar o ayudar a los demás",e:"Trabajar manualmente, usar equipos y herramientas",f:"Usar mi talento artístico"},k:"EADBCF"},
+{t:"2. Mi mayor habilidad se manifiesta en…",o:{a:"Negocios",b:"Artes",c:"Ciencias",d:"Liderazgo",e:"Relaciones humanas",f:"Mecánica"},k:"FCEADB"},
+{t:"3. Soy muy incompetente en…",o:{a:"Mecánica",b:"Ciencia",c:"Relaciones humanas",d:"Negocios",e:"Liderazgo",f:"Artes"},k:"CEAFBD"},
+{t:"4. De estas actividades, la que menos me agradaría es…",o:{a:"Participar en actividades sociales muy formales",b:"Tener una posición de responsabilidad",c:"Llevar pacientes mentales a actividades recreativas",d:"Llevar registros exactos y complejos",e:"Escribir un poema",f:"Hacer algo que exija paciencia y precisión"},k:"BFEDAC"},
+{t:"5. Las materias que más me gustan son…",o:{a:"Arte",b:"Administración, contabilidad",c:"Química, Física",d:"Educación tecnológica, Mecánica",e:"Historia",f:"Ciencias sociales, Filosofía"},k:"DCFBEA"}];
+/* tablas de conversión (una lista por dimensión: R, I, S, C, E, A) */
+const TA=[[3,11,18,21,24,27,35,44],[8,19,29,31,33,36,37,43],[4,14,15,16,17,22,28,42],[5,6,7,9,10,26,40,41],[2,12,23,32,38,39,45],[1,13,20,25,30,34]];
+const TB=[[1,10,16],[9,13,14],[5,8,17],[3,4,18],[7,12,15],[2,6,11]];
+const TC=[[2,5,12],[4,9,10],[3,14,18],[1,8,13],[6,7,17],[11,15,16]];
+const INVB=[1,16],INVC=[12];
+const BL=["Más que los demás","Igual que los demás","Menos que los demás"],CL=["Muy importante","Más o menos","Poco importante"];
+const DA=["Que evita el trato con la gente y prefiere estar solo/a.","Le gusta discutir y defender su postura, aunque se arme debate.","Se cree superior a los demás y lo hace notar.","Tiene aptitud para hacer bien lo que se propone.","Normal, sin nada que lo haga destacar del resto.","Se adapta a lo que hay, sin buscar cambiarlo.","Hace las cosas con mucha dedicación y cuidado, a conciencia.","Quiere saber y averiguar cómo funcionan las cosas.","Necesita el apoyo o la aprobación de otros para decidir o actuar.","Logra buenos resultados aprovechando bien su tiempo y sus recursos.","Sabe esperar y mantener la calma sin apurarse ni enojarse.","Activo/a y con mucha energía; siempre en movimiento.","Con rasgos que se asocian socialmente a lo femenino (sensibilidad, delicadeza). Marcalo solo si sentís que te describe.","Se lleva bien con la gente y hace amistades con facilidad.","Comparte lo que tiene (tiempo, cosas, ayuda) sin esperar nada a cambio.","Siempre listo/a para dar una mano.","Le cuesta cambiar de opinión o adaptarse; muy firme en lo suyo.","Le cuesta darse cuenta de lo que sienten los demás o conmoverse.","Se enfoca más en su mundo interior; se recarga estando solo/a o con poca gente.","Capta las cosas “de golpe”, sin razonarlas paso a paso.","Se enoja o se molesta con facilidad.","Trata a los demás con cordialidad y buena onda.","Respeta las normas de cortesía y educación.","Rasgos que se asocian socialmente a lo masculino (fuerza, firmeza). Marcalo solo si sentís que te describe.","No se conforma: cuestiona lo establecido y quiere cambiarlo.","Imagina las cosas distintas de como son y le cuesta ver lo concreto.","Con pocas lecturas o conocimientos generales. No es un insulto: depende de cuánto leíste o estudiaste.","No se guía por grandes ideales; prefiere lo práctico.","No es muy buscado/a ni conocido/a en su grupo.","Se le ocurren ideas propias, distintas a las de los demás.","Suele esperar lo peor de las situaciones.","Busca el placer y disfrutar de la vida.","Va a lo concreto y a lo que sirve; resuelve rápido.","Se resiste a las reglas o a la autoridad.","Cuenta poco de sí mismo/a y de lo que siente.","Con buena formación y muchos conocimientos (lecturas, arte, historia).","Se mueve o actúa con calma, sin apuro.","Disfruta estar con gente y relacionarse.","Equilibrado/a: no cambia de ánimo ni de rumbo fácilmente.","Pone empeño y trabaja duro para lograr lo que quiere.","Con fortaleza física o de carácter.","Desconfiado/a: sospecha de las intenciones de los demás.","Cumplidor/a: hace lo que promete y llega a tiempo.","No presume de lo que logra ni se cree más que nadie.","Hace las cosas a su manera, fuera de lo habitual."];
+const DB=["Se te va la atención o se te olvidan las cosas con facilidad.","Facilidad para dibujar, pintar, actuar, hacer música u otras artes.","Facilidad para trámites, papeles y seguir procedimientos ordenados.","Preferís mantener las cosas como están y las costumbres tradicionales.","Trabajar en equipo y colaborar con otros.","Facilidad para expresar lo que sentís o pensás (hablando, escribiendo, con gestos).","Capacidad de guiar y motivar a un grupo.","Disfrutás dar una mano a los demás.","Facilidad con los números y los cálculos.","Facilidad para entender, armar o arreglar máquinas y aparatos.","Se te ocurren ideas distintas a las de los demás.","Qué tan bien caés o qué tan buscado/a sos por personas del otro sexo.","Facilidad para buscar información, preguntarte cosas y averiguar.","Facilidad para pensar con método, experimentar y entender fenómenos.","Confianza en lo que sos y en lo que hacés.","Qué tan bien conocés tus emociones, gustos y límites.","Facilidad para ponerte en el lugar del otro.","Prolijidad y limpieza en lo que hacés y en tu aspecto."];
+const DC=["","","","Que otros te consulten porque sabés mucho del tema; ser un referente.","","","Que tu opinión pese en decisiones de la comunidad o de la política.","Cumplir las prácticas de una religión (misas, rezos, ritos).","Aportar ideas, teorías y explicaciones a la ciencia.","Aportar a la ciencia con aparatos, métodos o aplicaciones prácticas.","","","","Hacer algo que mejore la vida de las personas.","","","Saber de dinero, inversiones y cómo manejar una empresa.","Encontrar un sentido, algo para lo que valga la pena vivir."];
+const def=it=>it.t==="a"?DA[it.n-1]:it.t==="b"?DB[it.n-1]:it.t==="c"?DC[it.n-1]:"";
+const hint=it=>def(it)?`<button class="hint" data-act="showdef" data-d="${S.i}">💡 ¿Qué significa? <small>(o mantené apretado)</small></button>`:"";
+function showDef(i){const it=Q[i],d=def(it);if(!d)return;closeDef();const s=document.createElement("div");s.id="sheet";s.innerHTML=`<div class="sh"><b>💡 ${it.q}</b><p>${d}</p><button class="btn or" onclick="closeDef()">¡Entendido!</button></div>`;s.onclick=e=>{if(e.target===s)closeDef()};document.body.appendChild(s)}
+function closeDef(){const s=document.getElementById("sheet");if(s)s.remove()}
+const Q=[];
+ADJ.forEach((q,i)=>Q.push({l:1,t:"a",n:i+1,q}));
+BQ.forEach((q,i)=>Q.push({l:2,t:"b",n:i+1,q}));
+CQ.forEach((q,i)=>Q.push({l:3,t:"c",n:i+1,q}));
+DQ.forEach((q,i)=>Q.push({l:4,t:"d",n:i,q:q.t.replace(/^\d\.\s*/,""),o:q.o}));
+const LV=[{e:"🪞",n:"Así sos",d:"Van a aparecer palabras una por una. Decidí si te describen, tal como sos y no como te gustaría ser. ¿No sabés qué significa una palabra? Mantené el dedo apretado sobre ella."},{e:"⚖️",n:"Comparate",d:"¿Cómo te considerás respecto de otras personas de tu edad?"},{e:"🎯",n:"Tus metas",d:"¿Qué importancia le das a cada logro o aspiración?"},{e:"🧭",n:"Tus preferencias",d:"Cinco preguntas finales. Elegí una sola opción en cada una."}];
+const PA=["#f2b8c3","#bcd9d9","#f4c9a5","#f2dc9b","#aecfdb"],IB=["🔼","🟰","🔽"],IC=["🔥","👍","💤"];
+let S={v:"cover",i:0,a:new Set(),b:{},c:{},d:{},x:{},lock:false};
+const app=document.getElementById("app");
+function calc(){
+ return DIMS.map((_,k)=>{
+  const A=TA[k].filter(n=>S.a.has(n)).length,
+  B=TB[k].filter(n=>INVB.includes(n)?S.b[n]>=1:S.b[n]===0).length,
+  C=TC[k].filter(n=>INVC.includes(n)?S.c[n]>=1:S.c[n]===0).length,
+  D=DQ.filter((q,i)=>S.d[i]&&S.d[i].toUpperCase()===q.k[k]).length;
+  return {k,A,B,C,D,t:A+B+C+D,max:TA[k].length+9};
+ });
+}
+function cover(){
+ const dots=DIMS.map((d,k)=>{const a=(k*60-90)*Math.PI/180;return `<i style="left:${50+43*Math.cos(a)}%;top:${50+43*Math.sin(a)}%;background:${d.c}">${d.l}</i>`}).join("");
+ return `<div class="center"><div class="compass">${dots}<div class="needle"></div><div class="hub"></div></div>
+ <h1>Orientación Vocacional</h1><div class="tag"><h1>2026</h1></div>
+ <p class="lead">Un juego rápido para descubrir qué te mueve y qué podrías estudiar. 4 niveles · ${Q.length} desafíos · unos 10 minutos.</p>
+ <button class="btn or" data-act="start">🧭 ¡Empezar!</button>
+ <p class="foot">Basado en el Test de Intereses Profesionales de John Holland. Tus respuestas no se guardan ni se envían.</p></div>`;
+}
+function intro(){const l=Q[S.i].l,L=LV[l-1];
+ return `<div class="center"><div class="emoji">${L.e}</div><span class="pill">Nivel ${l} de 4</span><h2 style="margin:12px 0">${L.n}</h2><p class="lead">${L.d}</p><button class="btn or" data-act="go">¡Vamos! →</button></div>`}
+function question(){
+ const it=Q[S.i],L=LV[it.l-1],cur=S.x[S.i],on=v=>cur===v?" on":"";
+ let h=`<div class="hud"><button class="ib" data-act="back" aria-label="Volver">←</button><span class="pill">Nivel ${it.l} · ${L.n}</span><span class="xp">⭐ ${S.i*10}</span></div>
+ <div class="prog"><i style="width:${S.i/Q.length*100}%"></i></div><div class="cnt">${S.i+1} / ${Q.length}</div>`;
+ if(it.t==="a")h+=`<div class="card big hold" data-d="${S.i}" style="background:${PA[S.i%5]}">${it.q}</div>${hint(it)}<p class="ask">¿Te describe?</p><button class="ans yes${on("1")}" data-v="1">✅ Sí, soy así</button><button class="ans no${on("0")}" data-v="0">🙅 No tanto</button>`;
+ else if(it.t==="d")h+=`<div class="card qt">${it.q}</div>`+Object.entries(it.o).map(([k,v])=>`<button class="ans${on(k)}" data-v="${k}">${v}</button>`).join("");
+ else{const lab=it.t==="b"?BL:CL,ic=it.t==="b"?IB:IC;
+  h+=`<div class="card qt${def(it)?" hold":""}" data-d="${S.i}">${it.q}</div>${hint(it)}`+lab.map((l,j)=>`<button class="ans${on(""+j)}" data-v="${j}">${ic[j]} ${l}</button>`).join("")}
+ return h;
+}
+function result(){
+ const r=calc(),top=[...r].sort((x,y)=>y.t-x.t||x.k-y.k).slice(0,3);
+ S.txt=`🧭 Orientación Vocacional 2026\nMi código de Holland: ${top.map(x=>DIMS[x.k].l).join("")}\n`+top.map((x,i)=>`${i+1}. ${DIMS[x.k].n} (${x.t} pts): ${DIMS[x.k].j}`).join("\n")+`\n(Test de intereses profesionales de John Holland)`;
+ return `<div class="center"><div class="emoji">🏆</div><span class="pill">¡Juego completado! ⭐ ${Q.length*10} XP</span><h1 style="margin-top:12px">Tu perfil</h1>
+ <div class="code">${top.map((x,i)=>`<span style="background:${DIMS[x.k].c};animation-delay:${i*.3}s">${DIMS[x.k].l}</span>`).join("")}</div>
+ <p class="lead">Tus intereses más altos: <b>${top.map(x=>DIMS[x.k].n).join(" · ")}</b>. Ese es tu código de Holland.</p></div>
+ ${top.map(x=>`<div class="card dim"><h3 style="color:${DIMS[x.k].c}">${DIMS[x.k].n}</h3><p>${DIMS[x.k].d}</p><p><b>Áreas para explorar:</b> ${DIMS[x.k].j}.</p></div>`).join("")}
+ <div class="card"><h2 style="font-size:24px">Cuadro resumen</h2>${r.map(x=>`<div class="bar"><b><span>${DIMS[x.k].n}</span><span>${x.t}</span></b><div class="track"><i data-w="${Math.round(x.t/x.max*100)}" style="background:${DIMS[x.k].c}"></i></div><small>A: ${x.A} · B: ${x.B} · C: ${x.C} · D: ${x.D}</small></div>`).join("")}</div>
+ <div class="card"><h2 style="font-size:22px">Tu veredicto</h2><p style="white-space:pre-line;margin:10px 0">${S.txt}</p><p id="cst" class="ask" style="margin:0"></p></div>
+ <div class="center"><button class="btn or" id="copy">📋 Copiar mi resultado</button><button class="btn" data-act="reset">🔄 Jugar de nuevo</button></div>
+ <p class="foot">Es una herramienta de orientación, no un veredicto: conversá tu resultado con tu orientador/a.</p>`;
+}
+function render(){
+ app.innerHTML=S.v==="cover"?cover():S.v==="intro"?intro():S.v==="q"?question():result();
+ window.scrollTo(0,0);closeDef();
+ if(S.v==="end"){setTimeout(()=>document.querySelectorAll(".track i").forEach(e=>e.style.width=e.dataset.w+"%"),400);confetti();copiar(S.txt).then(ok=>{const e=document.getElementById("cst");if(e)e.textContent=ok?"✅ Tu veredicto ya está copiado en el portapapeles":"Tocá el botón de abajo para copiarlo"})}
+}
+function confetti(){const c=["#cf5671","#55797c","#d4814a","#e8c870","#aecfdb"];
+ for(let i=0;i<50;i++){const s=document.createElement("span");s.className="cf";s.style.cssText=`left:${Math.random()*100}%;background:${c[i%5]};animation-duration:${2+Math.random()*2}s;animation-delay:${Math.random()*.8}s`;document.body.appendChild(s);setTimeout(()=>s.remove(),5000)}}
+function next(){S.i++;S.lock=false;S.v=S.i>=Q.length?"end":Q[S.i].l!==Q[S.i-1].l?"intro":"q";render()}
+function answer(v){
+ if(S.lock)return;const it=Q[S.i];S.x[S.i]=v;
+ if(it.t==="a"){v==="1"?S.a.add(it.n):S.a.delete(it.n)}
+ else if(it.t==="b")S.b[it.n]=+v;else if(it.t==="c")S.c[it.n]=+v;else S.d[it.n]=v;
+ S.lock=true;app.querySelectorAll(".ans").forEach(b=>b.classList.toggle("on",b.dataset.v===v));
+ setTimeout(next,260);
+}
+async function copiar(txt){
+ try{await navigator.clipboard.writeText(txt);return true}catch(_){}
+ try{const t=document.createElement("textarea");t.value=txt;t.setAttribute("readonly","");t.style.cssText="position:fixed;top:0;left:0;opacity:0";document.body.appendChild(t);t.focus();t.select();t.setSelectionRange(0,99999);const ok=document.execCommand("copy");t.remove();return ok}catch(_){return false}
+}
+let ht;
+app.addEventListener("pointerdown",e=>{const h=e.target.closest(".hold");if(!h)return;clearTimeout(ht);ht=setTimeout(()=>showDef(+h.dataset.d),420)});
+["pointerup","pointercancel","pointerleave"].forEach(n=>app.addEventListener(n,()=>clearTimeout(ht)));
+app.addEventListener("contextmenu",e=>{if(e.target.closest(".hold"))e.preventDefault()});
+app.addEventListener("click",e=>{
+ const t=e.target.closest("button");if(!t)return;const a=t.dataset.act;
+ if(t.dataset.v!==undefined)return answer(t.dataset.v);
+ if(a==="showdef")showDef(+t.dataset.d);
+ else if(a==="start"){S.v="intro";S.i=0;render()}
+ else if(a==="go"){S.v="q";render()}
+ else if(a==="back"){if(S.i===0)S.v="cover";else{S.i--;S.v="q"}S.lock=false;render()}
+ else if(a==="reset"){S={v:"cover",i:0,a:new Set(),b:{},c:{},d:{},x:{},lock:false};render()}
+ else if(t.id==="copy"){copiar(S.txt).then(ok=>{t.textContent=ok?"¡Copiado! ✅":"Mantené apretado el texto para copiarlo";const e=document.getElementById("cst");if(e&&ok)e.textContent="✅ Tu veredicto ya está copiado en el portapapeles"})}
+});
+render();
+</script>
+</body>
+</html>
